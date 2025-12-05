@@ -1,0 +1,45 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#fff;
+  --accent:#4b9ce2;
+  --danger:#d9534f;
+  --success:#5cb85c;
+}
+body{
+  font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  margin:0;
+  padding:30px;
+  color:#222;
+}
+.container{
+  max-width:720px;
+  margin:0 auto;
+}
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(16,24,40,0.06);
+}
+h1{margin:0 0 12px 0}
+form{max-width:460px;margin-top:12px}
+.field{margin-bottom:14px}
+label{display:block;font-weight:600;margin-bottom:6px}
+input[type='text'],input[type='number']{
+  width:100%;
+  padding:8px 10px;
+  border:2px solid #e2e8f0;
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+  transition:border-color .18s, box-shadow .18s;
+}
+input[type='text']:focus,input[type='number']:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(75,156,226,0.08)}
+input.valid{border-color:var(--success)}
+input.invalid{border-color:var(--danger)}
+.error{color:var(--danger);font-size:13px;margin-top:6px}
+button{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+.header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.small{font-size:13px;color:#666}
+.separator{height:1px;background:#eef2f7;margin:18px 0;border-radius:2px}
