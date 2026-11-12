@@ -7,12 +7,11 @@ export default class App extends React.Component {
         return (
              <div className="container">
                 <div className="card">
-                  <Header title="Форма — классовые компоненты" subtitle="React + TypeScript + Vite" />
+                  <Header title="Форма — класові компоненти" subtitle="React + TypeScript + Vite" />
                   <div className="separator" />
                   <StudentForm />
                 </div>
               </div>
-              );
+        );
     }
 }
-

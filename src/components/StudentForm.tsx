@@ -24,14 +24,22 @@ export default class StudentForm extends React.Component {
                   this.ratingRef.current?.getValidity();
 
     if (!valid) {
-      Swal.fire({ icon: 'error', title: 'Ошибка', text: 'Пожалуйста исправьте ошибки в форме' });
+      Swal.fire({ icon: 'error', title: 'Помилка', text: 'Будь ласка, виправте помилки у формі' });
       return;
     }
 
     Swal.fire({
-      title: 'Данные студента',
-      html: `<b>Имя:</b> ${name}<br/><b>Фамилия:</b> ${surname}<br/><b>Возраст:</b> ${age}<br/><b>Рейтинг:</b> ${rating}`,
-      icon: 'info'
+      title: 'Дані студента',
+      html: `
+        <div style="text-align: left; font-size: 16px;">
+          <b>Ім'я:</b> ${name}<br/>
+          <b>Прізвище:</b> ${surname}<br/>
+          <b>Вік:</b> ${age}<br/>
+          <b>Рейтинг:</b> ${rating}
+        </div>
+      `,
+      icon: 'info',
+      confirmButtonColor: '#4b9ce2'
     });
   }
 
@@ -42,8 +50,8 @@ export default class StudentForm extends React.Component {
         <SurnameField ref={this.surnameRef} value="" />
         <AgeField ref={this.ageRef} value="0" />
         <RatingField ref={this.ratingRef} value="0" />
-        <div style={{marginTop:12}}>
-          <button type="submit">Отправить</button>
+        <div style={{marginTop: 16}}>
+          <button type="submit">Надіслати</button>
         </div>
       </form>
     );

@@ -7,7 +7,7 @@ export default class RatingField extends React.Component<Props, State> {
   constructor(props: Props){
     super(props);
     const valid = this.validate(props.value);
-    this.state = { value: props.value, valid, error: valid ? '' : 'Рейтинг должен быть от 1 до 12' };
+    this.state = { value: props.value, valid, error: valid ? '' : 'Рейтинг має бути від 1 до 12' };
   }
 
   validate = (v: string) => {
@@ -18,7 +18,7 @@ export default class RatingField extends React.Component<Props, State> {
   onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value;
     const valid = this.validate(v);
-    this.setState({ value: v, valid, error: valid ? '' : 'Рейтинг должен быть от 1 до 12' });
+    this.setState({ value: v, valid, error: valid ? '' : 'Рейтинг має бути від 1 до 12' });
   }
 
   getValue = () => this.state.value;
